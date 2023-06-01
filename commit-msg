@@ -1,0 +1,10 @@
+#!/bin/sh
+
+COMMIT_MESSAGE=cat ./.git/COMMIT_EDITMSG;
+
+if [$COMMIT_MESSAGE =="" ]
+then
+	echo "Commit vacío, vuelve a intentarlo"
+else
+	exit 1
+fi
